@@ -2,55 +2,55 @@
 A simple calculator implemented by using Sun RPG (rpcgen)
 
 **Commands to install:**
-	sudo apt-get install rpcbind
-	rpcinfo
-		(rpcinfo command is for checking the installation)
+sudo apt-get install rpcbind
+rpcinfo
+(rpcinfo command is for checking the installation)
 
 **Commands used for RPC generation from the main file calc.x:**
-	rpcgen -a -C calc.x
-	make -f Makefile.calc
-	sudo ./calc_server
+rpcgen -a -C calc.x
+make -f Makefile.calc
+sudo ./calc_server
 **Open another Terminal and run**
-	sudo ./calc_client localhost [operations in postfix syntax]
+sudo ./calc_client localhost [operations in postfix syntax]
 
 **Example test codes**
 
 **Example 1 Call: (basic operation)**
-	sudo ./calc_client localhost 10 20 x
+sudo ./calc_client localhost 10 20 x
 **Example 1 Server:**
-	mul(10, 20) is called
+mul(10, 20) is called
 **Example 1 Client:**
-	Inserting 10
-	Inserting 20
-	Removing 20
-	Removing 10
-	Result: 200
-	Inserting 200
+Inserting 10
+Inserting 20
+Removing 20
+Removing 10
+Result: 200
+Inserting 200
 
 
 **Example 2 Call: (complex operation)**
-	sudo ./calc_client localhost 10 20 x 35 - 44 +
+sudo ./calc_client localhost 10 20 x 35 - 44 +
 **Example 2 Server:**
-	mul(10, 20) is called
-	sub(200, 35) is called
-	add(165, 44) is called
+mul(10, 20) is called
+sub(200, 35) is called
+add(165, 44) is called
 **Example 2 Client:**
-	Inserting 10
-	Inserting 20
-	Removing 20
-	Removing 10
-	Result: 200
-	Inserting 200
-	Inserting 35
-	Removing 35
-	Removing 200
-	Result: 165
-	Inserting 165
-	Inserting 44
-	Removing 44
-	Removing 165
-	Result: 209
-	Inserting 209
+Inserting 10
+Inserting 20
+Removing 20
+Removing 10
+Result: 200
+Inserting 200
+Inserting 35
+Removing 35
+Removing 200
+Result: 165
+Inserting 165
+Inserting 44
+Removing 44
+Removing 165
+Result: 209
+Inserting 209
 
 **Example 3 Call: (invalid input type error test)**
 	sudo ./calc_client localhost 10 20 asd
