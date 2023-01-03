@@ -1,2 +1,2 @@
 # RPC-Calculator
-A simple calculator implemented by using Sun RPG (rpcgen)
+A simple calculator implemented by using Sun RPC (rpcgen)
