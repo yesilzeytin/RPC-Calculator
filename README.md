@@ -1,2 +1,2 @@
 # RPC-Calculator
-A simple calculator to utilize remote procedure calls implemented with Sun RPC (rpcgen)
+A calculator console app to utilize remote procedure calls implemented with Sun RPC (rpcgen)
